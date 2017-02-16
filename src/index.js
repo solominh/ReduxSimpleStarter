@@ -7,9 +7,11 @@ import App from './components/app';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
+// const store = createStore(reducers);
+const store = createStoreWithMiddleware(reducers);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store}>
     <App />
   </Provider>
   , document.querySelector('.container'));

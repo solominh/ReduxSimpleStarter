@@ -1,4 +1,4 @@
-// const webpack = require('webpack'); //to access built-in plugins
+const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
 const config = {
@@ -14,8 +14,8 @@ const config = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: [['es2015', { modules: false }]],
-          plugins: []
+          // presets: [['es2015', { modules: false }]],
+          // plugins: []
         }
       }
     ]
